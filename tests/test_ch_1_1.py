@@ -32,3 +32,10 @@ def test_get_union():
     assert ch_1_1.get_union([1, 2, 3], [4, 5, 6]) == [1, 2, 3, 4, 5, 6]
     assert ch_1_1.get_union([1, 'b', 'c'], [1, 'b', 3]) == [1, 'b', 'c', 3]
     assert ch_1_1.get_union([[1, 2], 0], [[1, 2]]) == [[1, 2], 0]
+
+def test_count_characters():
+    assert ch_1_1.count_characters('test') == {'t': 2, 'e': 1, 's': 1}
+    assert ch_1_1.count_characters('aardvark') == {'d': 1, 'k': 1, 'v': 1, 'r': 2, 'a': 3}
+    assert ch_1_1.count_characters('    ') == {' ': 4}
+    assert ch_1_1.count_characters('') == {}
+    assert ch_1_1.count_characters('a a ') == {'a': 2, ' ': 2}

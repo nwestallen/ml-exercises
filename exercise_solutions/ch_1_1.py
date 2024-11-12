@@ -33,3 +33,12 @@ def get_union(a1: list, a2: list):
         if not j in result:
             result.append(j)
     return result
+
+def count_characters(s: str):
+    result = {}
+    for i in s:
+        if i in result:
+            result[i] += 1
+        else:
+            result[i] = 1
+    return result
