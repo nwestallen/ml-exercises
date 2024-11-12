@@ -15,3 +15,8 @@ def test_convert_to_numbers():
     assert ch_1_1.convert_to_numbers('abc') == [1, 2, 3]
     assert ch_1_1.convert_to_numbers('a cat') == [1, 0, 3, 1, 20]
     assert ch_1_1.convert_to_numbers('') == []
+
+def test_convert_to_letters():
+    assert ch_1_1.convert_to_letters([1, 2, 3]) == 'abc'
+    assert ch_1_1.convert_to_letters([1, 0, 3, 1, 20]) == 'a cat'
+    assert ch_1_1.convert_to_letters([]) == ''

@@ -12,3 +12,7 @@ def check_if_symmetric(s: str):
 
 def convert_to_numbers(s: str):
     return [0 if i == ' ' else ord(i) - 96 for i in s]
+
+def convert_to_letters(l: list):
+    alpha = ' abcdefghijklmnopqrstuvwxyz'
+    return ''.join([alpha[n] for n in l])
