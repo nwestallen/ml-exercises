@@ -9,3 +9,6 @@ def check_if_symmetric(s: str):
                 return False
             i += 1
         return True
+
+def convert_to_numbers(s: str):
+    return [0 if i == ' ' else ord(i) - 96 for i in s]
