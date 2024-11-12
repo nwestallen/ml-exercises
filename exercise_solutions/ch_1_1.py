@@ -16,3 +16,20 @@ def convert_to_numbers(s: str):
 def convert_to_letters(l: list):
     alpha = ' abcdefghijklmnopqrstuvwxyz'
     return ''.join([alpha[n] for n in l])
+
+def get_intersection(a1: list, a2: list):
+    result = []
+    for i in a1:
+        if not i in result and i in a2:
+            result.append(i)
+    return result
+
+def get_union(a1: list, a2: list):
+    result = []
+    for i in a1:
+        if not i in result:
+            result.append(i)
+    for j in a2:
+        if not j in result:
+            result.append(j)
+    return result

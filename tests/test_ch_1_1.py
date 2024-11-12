@@ -20,3 +20,15 @@ def test_convert_to_letters():
     assert ch_1_1.convert_to_letters([1, 2, 3]) == 'abc'
     assert ch_1_1.convert_to_letters([1, 0, 3, 1, 20]) == 'a cat'
     assert ch_1_1.convert_to_letters([]) == ''
+
+def test_get_intersection():
+    assert ch_1_1.get_intersection(['a', 'b', 'c'], ['b']) == ['b']
+    assert ch_1_1.get_intersection([1, 2, 3], [4, 5, 6]) == []
+    assert ch_1_1.get_intersection([1, 'b', 'c'], [1, 'b', 3]) == [1, 'b']
+    assert ch_1_1.get_intersection([[1, 2], 0], [[1, 2]]) == [[1, 2]]
+
+def test_get_union():
+    assert ch_1_1.get_union(['a', 'b', 'c'], ['b']) == ['a', 'b', 'c']
+    assert ch_1_1.get_union([1, 2, 3], [4, 5, 6]) == [1, 2, 3, 4, 5, 6]
+    assert ch_1_1.get_union([1, 'b', 'c'], [1, 'b', 3]) == [1, 'b', 'c', 3]
+    assert ch_1_1.get_union([[1, 2], 0], [[1, 2]]) == [[1, 2], 0]
