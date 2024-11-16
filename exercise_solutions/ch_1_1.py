@@ -42,3 +42,16 @@ def count_characters(s: str):
         else:
             result[i] = 1
     return result
+
+def is_prime(i: int):
+    if i == 2 or i == 3:
+        return True
+    elif i % 2 == 0:
+        return False
+    else:
+        k = 2
+        while k <= i ** 0.5:
+            if is_prime(k) and i % k == 0:
+                return False
+            k += 1
+        return True

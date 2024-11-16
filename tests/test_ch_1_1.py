@@ -39,3 +39,15 @@ def test_count_characters():
     assert ch_1_1.count_characters('    ') == {' ': 4}
     assert ch_1_1.count_characters('') == {}
     assert ch_1_1.count_characters('a a ') == {'a': 2, ' ': 2}
+
+def test_is_prime():
+    assert ch_1_1.is_prime(2), '2 is prime'
+    assert ch_1_1.is_prime(3), '3 is prime'
+    assert not ch_1_1.is_prime(4), '4 is not prime'
+    assert ch_1_1.is_prime(5), '5 is prime'
+    assert not ch_1_1.is_prime(6), '6 is not prime'
+    assert ch_1_1.is_prime(7), '7 is prime'
+    assert not ch_1_1.is_prime(9), '9 is not prime'
+    assert not ch_1_1.is_prime(19325871292), 'Large even is not prime'
+    assert not ch_1_1.is_prime(3**20), '3^20 is not prime'
+    assert ch_1_1.is_prime(997), '997 is prime'
